@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-
+ <h3> MainTrailer </h3>
 </template>
 
 <style scoped>
