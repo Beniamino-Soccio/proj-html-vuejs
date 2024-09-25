@@ -9,9 +9,16 @@ export default {
 </script>
 
 <template>
-  <h5>Abdi MainGallary</h5>
+  <div>
+
+    <h5>Abdi MainGallary</h5>
+  </div>
 
 </template>
 
 <style scoped>
+div{
+  height: 500px;
+  border: 1px dashed dodgerblue;
+}
 </style>

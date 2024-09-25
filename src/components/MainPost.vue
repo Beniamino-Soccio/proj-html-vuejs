@@ -9,8 +9,12 @@ export default {
 </script>
 
 <template>
-
+<div>post</div>
 </template>
 
 <style scoped>
+div{
+  height: 500px;
+  border: 1px dashed blue;
+}
 </style>
