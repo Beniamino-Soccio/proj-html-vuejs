@@ -9,6 +9,7 @@ export default {
 </script>
 
 <template>
+  <h5>Abdi MainGallary</h5>
 
 </template>
 
