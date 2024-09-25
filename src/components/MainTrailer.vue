@@ -60,12 +60,15 @@ export default {
       <div class="current-video">
         <iframe src="https://www.youtube.com/embed/9rYkZlt2hHE?si=3dtJ99zCLUHm3fv6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
       <div class="playlist-video">
-        <div class="info-playlist">
-          video playlist 
-          <p>1/7</p>
+        <div class="info-playlist d-flex align-items-center px-4">
+          <div class="d-flex flex-column">
+            <p>video playlist</p> 
+            <p>1/7</p>
+
+          </div>
         </div>
         <ul>
-          <li class="d-flex align-items-center p-2 gap-3" v-for="video in videos">
+          <li class="d-flex align-items-center gap-3" v-for="video in videos">
             <p class="text-center">{{video.index}}</p>
             <img :src="video.img" :alt="video.name">
             <p>{{video.name}}</p>
@@ -93,7 +96,8 @@ ul{
   max-width: 400px;
 }
 li{
-  border: 1px solid lightgray;
+  border-bottom: 1px solid #7c7c7c;
+  padding: 12px;
 }
 ul img{
   width: 85px;
