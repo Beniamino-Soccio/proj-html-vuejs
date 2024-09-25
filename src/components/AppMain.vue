@@ -1,10 +1,10 @@
 <script>
-import MainGallery from "./components/MainGallery.vue";
-import MainNews from "./components/MainNews.vue";
-import MainPost from "./components/MainPost.vue";
-import MainSlider from "./components/MainSlider.vue";
-import MainThumbs from "./components/MainThumbs.vue";
-import MainTrailer from "./components/MainTrailer.vue";
+import MainGallery from "./MainGallery.vue";
+import MainNews from ".//MainNews.vue";
+import MainPost from "./MainPost.vue";
+import MainSlider from "./MainSlider.vue";
+import MainThumbs from "./MainThumbs.vue";
+import MainTrailer from "./MainTrailer.vue";
 
 export default {
   components: {
