@@ -2,6 +2,10 @@
 export default {
   data() {
     return {
+      urlVideos:[
+      https://www.youtube.com/embed/9rYkZlt2hHE?si=3dtJ99zCLUHm3fv6,
+      
+      ]
 
     }
   }
@@ -9,15 +13,24 @@ export default {
 </script>
 
 <template>
-  <div>
-    <h5>io sono la sezione dei trailers con i video</h5>
+  <div class="base">
+    <div class="container">
+      <div class="current-video">
+        <iframe src="https://www.youtube.com/embed/9rYkZlt2hHE?si=3dtJ99zCLUHm3fv6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+      <div class="playlist-video">
 
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
-div{
-  height: 500px;
+.base{
+  height: 650px;
   border: 1px dashed #ff00c8;
+}
+iframe{
+  width: 840px;
+  height: 550px;
 }
 </style>
