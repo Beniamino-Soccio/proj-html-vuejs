@@ -2,13 +2,14 @@
 export default {
   data() {
     return {
-      
+
     }
   }
 }
 </script>
 
 <template>
+  <h1>MainNews</h1>
 <div>
 news
 </div>
