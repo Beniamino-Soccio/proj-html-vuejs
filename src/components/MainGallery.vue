@@ -9,22 +9,22 @@ export default {
 </script>
 
 <template>
-  <div class="conteiner">
+  <div class="container">
     <div class="gallery">
-      <div class="row ">
-        <div class="col-3 side">
-        </div>
-        <div class="col-6 central">
-        </div>
-        <div class="col-3 side">
-        </div>
-
-
+      <div class="left-side">
+        <div class="lu"></div>
+        <div class="ld"></div>
       </div>
-
+      <div class="centrale">
+        <div class="c"></div>
+      </div>
+      <div class="right-side">
+        <div class="ru"></div>
+        <div class="rd"></div>
+      </div>
+      
+     
     </div>
-
-  
   </div>
 
 </template>
@@ -36,18 +36,49 @@ export default {
   display: flex;
 }
 
-.central {
+.c {
   border-radius: 10px;
   background-color: gray;
-  width: 400px;
-  height: 450 px,
+  height: 100%;
+  width: 680px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-.side{
+.lu{
+ 
   border-radius: 10px;
   background-color: green;
-  width: 100px;
-  height: 200px,
+  height: calc(100% / 2 - 5px);
+  width: 300px;
+  margin-bottom: 10px;
 }
+.ld{
+ 
+  border-radius: 10px;
+  background-color: green;
+  height: calc(100% / 2 - 5px);
+  width: 300px;
+
+}
+.ru {
+  border-radius: 10px;
+  background-color: green;
+  height: calc(100% / 2 - 5px);
+  width: 300px;
+  margin-bottom: 10px;
+
+}
+.rd{
+
+  border-radius: 10px;
+  background-color: green;
+  width: 100%;
+  height: calc(100% / 2 - 5px);
+  width: 300px;
+
+}
+
+
 
 
 </style>
