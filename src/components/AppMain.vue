@@ -14,7 +14,7 @@ export default {
     MainSlider,
     MainThumbs,
     MainTrailer,
-  }
+  },
   data() {
     return {
       

@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-
+<h5>io sono la sezione dei thumbs</h5>
 </template>
 
 <style scoped>
