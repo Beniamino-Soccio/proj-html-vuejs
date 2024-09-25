@@ -2,15 +2,14 @@
 export default {
   data() {
     return {
-      
+
     }
   }
 }
 </script>
 
 <template>
- <h3> MainTrailer </h3>
+  <h5>io sono la sezione dei trailers con i video</h5>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
