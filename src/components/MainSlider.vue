@@ -141,7 +141,7 @@ body {
 .append-buttons button {
   display: inline-block;
   cursor: pointer;
-  color: black;
+  color: purple;
   text-decoration: none;
   padding: 4px 10px;
   border-radius: 4px;
@@ -160,5 +160,21 @@ body {
 .main-slider{
   background-color: #f3f3f3;
   padding: 15px 30px;
+}
+::v-deep div.swiper-button-next,
+::v-deep div.swiper-button-prev {
+  color: red;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 25px;
+}
+.custom-prev{
+  font-size: 26px;
+  color: red;
+}
+.custom-next{
+font-size: 26px;
+color: red;
 }
 </style>
