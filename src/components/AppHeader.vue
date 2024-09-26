@@ -32,13 +32,15 @@ export default {
 
 <template>
   <header>
-    <div class="container py-4">
+    <div class="container my-3">
       <div class="row">
+        <!--logo header-->
         <div class="col d-flex align-items-center">
           <img id="logo" src="/src/assets/img/anime-logo.webp" alt="">
         </div>
-        <div class="col-lg-6 col-sm-12 d-flex align-items-center">
-          <img class="banner-header" src="/src/assets/img/page-banner-1-768x71.webp" alt="">
+        <!--banner header-->
+        <div class="box-banner col-lg-6 col-sm-12 d-flex align-items-center">
+          <img class="banner-header" src="/src/assets/img/header-banner.webp" alt="">
         </div>
       </div>
     </div>
@@ -49,7 +51,7 @@ export default {
         <div class="col-2 d-flex align-items-center">
           <a href="#"><i class="bi bi-list fs-2"></i></a>
         </div>
-        <div class="col-8 d-flex align-items-center">
+        <div class="col-8 d-flex align-items-center justify-content-center">
           <ul class="m-0" v-for="(nav, index) in navLink">
             <a href="#"><li>{{navLink[index].name }}</li></a>
           </ul>
@@ -59,40 +61,6 @@ export default {
         </div>
       </div>
     </div>
-    
-    
-
-
-
-
-
-
-
-
-
-
-    <!--
-      <div class="container px-0">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2">
-                <!--burger menù
-                <a href="#"><span><i class="bi bi-list fs-2"></i></span></a>
-                <li class="nav-item" v-for="(nav, index) in navLink ">
-                  <a class="nav-link" aria-current="page" href="#">{{navLink[index].name }}</a>
-                </li>
-              </ul>
-            </div>
-            
-            <a class="navbar-brand" href="#"><i class="bi bi-search"></i></a>
-          </div>
-        </nav>
-      </div>
-    -->
     </header>
   </template>
 
@@ -112,11 +80,12 @@ a{
   object-fit: contain;
   width: 250px;
 }
-
 .banner-header{
-  border-radius: 5px;
-  width: 100%;
+    border-radius: 5px;
+    width: 100%;
+    height: 90px;
 }
+
 
 li{
   list-style-type: none;
