@@ -175,9 +175,13 @@ body {
   font-size: 13px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+::v-deep .swiper-button-next,
+::v-deep .swiper-button-prev {
   color: black;
+}
+
+::v-deep .swiper-pagination-bullet {
+  background-color: black;
 }
 
 .lorem {
