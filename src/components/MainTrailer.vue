@@ -72,7 +72,7 @@ export default {
           <i class="bi bi-play-fill text-white"></i>
           <div class="d-flex flex-column">
             <p>Video Playlist</p> 
-            <p class="fs-6">1/7</p>
+            <p class="fs-6">{{ activeVideo.index }}/7</p>
           </div>
         </div>
         <ul>
