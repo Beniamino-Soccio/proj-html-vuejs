@@ -12,22 +12,42 @@ export default {
   <div class="container">
     <div class="gallery">
       <div class="left-side">
-        <div class="lu"></div>
-        <div class="ld"></div>
+        <div class="lu">
+          <div class="bottoni">
+            <button class="btn btn-light me-2">Lifestyle</button>
+            <button class="btn btn-light me-2">Fashion</button>
+          </div>
+        </div>
+        <div class="ld">
+          <div class="bottoni">
+            <button class="btn btn-light me-2">Stories</button>
+            <button class="btn btn-light me-2">Travel</button>
+          </div>
+        </div>
       </div>
       <div class="centrale">
         <div class="c">
           <div class="bottoni">
-            <button class="btn btn-light">Lfestyle</button>
-            <button class="btn btn-light">Stories</button>
+            <button class="btn btn-light me-2">Lifestyle</button>
+            <button class="btn btn-light me-2">Stories</button>
             <button class="btn btn-light">Travel</button>
           </div>
 
         </div>
       </div>
       <div class="right-side">
-        <div class="ru"></div>
-        <div class="rd"></div>
+        <div class="ru">
+          <div class="bottoni">
+            <button class="btn btn-light me-2">Culture</button>
+            <button class="btn btn-light me-2">Lifestyle</button>
+          </div>
+        </div>
+        <div class="rd">
+          <div class="bottoni">
+            <button class="btn btn-light me-2">Lifestyle</button>
+            <button class="btn btn-light me-2">Travel</button>
+          </div>
+        </div>
       </div>
       
      
@@ -61,6 +81,8 @@ export default {
   height: calc(100% / 2 - 5px);
   width: 300px;
   margin-bottom: 10px;
+  position: relative;
+
 }
 .ld{
   background-image: url(../assets/img/travel-alone.webp);
@@ -69,6 +91,8 @@ export default {
   background-color: green;
   height: calc(100% / 2 - 5px);
   width: 300px;
+  position: relative;
+
 
 }
 .ru {
@@ -79,6 +103,8 @@ export default {
   height: calc(100% / 2 - 5px);
   width: 300px;
   margin-bottom: 10px;
+  position: relative;
+
 
 }
 .rd{  
@@ -89,6 +115,14 @@ export default {
   width: 100%;
   height: calc(100% / 2 - 5px);
   width: 300px;
+  position: relative;
+
+}
+
+.bottoni{
+  position: absolute;
+  top: 20px;
+  left: 10px;
 }
 
 
