@@ -2,7 +2,41 @@
 export default {
   data() {
     return {
-
+      activeIndex: 0,
+      cardList: [
+        {
+          title: 'Live Ideas You Might Be Anime',
+          image: '/src/assets/img/ideas-anime.webp'
+        },
+        {
+          title: 'Reasons To Visit France',
+          image: '/src/assets/img/visit-france.webp'
+        },
+        {
+          title: 'Traveling Alone Is Awesome',
+          image: '/src/assets/img/travel-alone-300x200.webp'
+        },
+        {
+          title: 'The Best Success Stories',
+          image: '/src/assets/img/success-story.webp'
+        },
+        {
+          title: 'Places For A Road Trip',
+          image: '/src/assets/img/best-places-300x200.webp'
+        },
+        {
+          title: 'Music The Love Of My Life',
+          image: '/src/assets/img/music-love.webp'
+        },
+        {
+          title: 'Fashion Trend Now A Days',
+          image: '/src/assets/img/anime-fashion.webp'
+        },
+        {
+          title: 'The Best Winter Outfits',
+          image: '/src/assets/img/winter.webp'
+        },
+      ]
     }
   }
 }
@@ -11,41 +45,19 @@ export default {
 <template>
   <section class="container py-5">
     <h3>FEATURED POSTS</h3>
-    <div class="d-flex py-4 text-center">
+    <div class="py-4 text-center">
       <div class="row">
-        <div class="col">
-          <div class="card">
-            <img src="../assets/img/ideas-anime.webp" class="card-img-top" alt="immagine">
-            <div class="card-body">
-              <h5 class="card-title">Live Ideas You Might Be Anime</h5>
-              <h6>December 26,2022</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </div>
+
+        <div v-for="(card, index) in cardList" :key="index" class="card col">
+          <img :src='card.image' class="card-img-top" alt="immagine">
+          <div class="card-body">
+            <h5 class="card-title"> {{ card.title }} </h5>
+            <h6>December 26,2022</h6>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <a href="#" class="btn btn-primary">Read More</a>
           </div>
         </div>
-        <div class="col">
-          <div class="card">
-            <img src="../assets/img/visit-france.webp" class="card-img-top" alt="immagine">
-            <div class="card-body">
-              <h5 class="card-title">Reasons To Visit France</h5>
-              <h6>December 26,2022</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card">
-            <img src="../assets/img/travel-alone-300x200.webp" class="card-img-top" alt="immagine">
-            <div class="card-body">
-              <h5 class="card-title">Traveling Alone Is Awesome</h5>
-              <h6>December 26,2022</h6>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <a href="#" class="btn btn-primary">Read More</a>
-            </div>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
