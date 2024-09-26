@@ -25,42 +25,63 @@ export default {
         {
           title: 'Live Ideas You Might Be Anime',
           image: '/src/assets/img/ideas-anime.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Culture',
+          secondTopic: 'Stories'
         },
         {
           title: 'Reasons To Visit France',
           image: '/src/assets/img/visit-france.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Lifestyle',
+          secondTopic: 'Travel'
         },
         {
           title: 'Traveling Alone Is Awesome',
           image: '/src/assets/img/travel-alone-300x200.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Stories',
+          secondTopic: 'Travel'
         },
         {
           title: 'The Best Success Stories',
           image: '/src/assets/img/success-story.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Culture',
+          secondTopic: 'Stories'
         },
         {
           title: 'Places For A Road Trip',
           image: '/src/assets/img/best-places-300x200.webp',
-          date: 'December 25, 2022'
+          date: 'December 25, 2022',
+          firstTopic: 'Lifestyle',
+          secondTopic: 'Stories'
         },
         {
           title: 'Music The Love Of My Life',
           image: '/src/assets/img/music-love.webp',
-          date: 'December 25, 2022'
+          date: 'December 25, 2022',
+          firstTopic: 'Culture',
+          secondTopic: 'Lifestyle'
         },
         {
           title: 'Fashion Trend Now A Days',
           image: '/src/assets/img/anime-fashion.webp',
-          date: 'December 25, 2022'
+          date: 'December 25, 2022',
+          firstTopic: 'Fashion',
+          secondTopic: 'Lifestyle'
         },
         {
           title: 'The Best Winter Outfits',
           image: '/src/assets/img/winter.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Fashion'
+        },
+        {
+          title: 'Beginner Photographer\'s Mistakes',
+          image: '/src/assets/img/photographers-mistakes.webp',
+          date: 'December 26, 2022',
+          firstTopic: 'Fashion'
         },
       ]
     };
@@ -71,7 +92,7 @@ export default {
 
 <template>
   <div class="container">
-    <h3>FEATURED POST</h3>
+    <h3 class="my-4">FEATURED POST</h3>
     <swiper ref="{swiperRef}" :slidesPerView="3" :loop="true" :centeredSlides="false" :spaceBetween="30"
       :navigation="true" :modules="modules" class="mySwiper">
       <swiper-slide class="card" v-for="(card, index) in cardList" :key="index">
