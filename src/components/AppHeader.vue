@@ -1,24 +1,98 @@
 <script>
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 export default {
   data() {
     return {
-      
+    navLink: [
+      {
+        name:  'HOME',
+        url: ''
+       },
+       { name: 'ABOUT US',
+        url: ''
+       },
+       { name: 'LIFESTYLE',
+        url: ''
+       },
+       { name: 'STORIES',
+        url: ''
+       },
+       { name: 'PAGES',
+        url: ''
+       },
+       { name: 'CONTACT US',
+        url: ''
+       },
+    ]
+  }
     }
   }
-}
 </script>
 
 <template>
-  <div>
-    <h5>Francesco</h5>  <h1>AppHeader</h1>
+  <header>
+    <div class="container my-3">
+      <div class="row">
+        <!--logo header-->
+        <div class="col d-flex align-items-center">
+          <img id="logo" src="/src/assets/img/anime-logo.webp" alt="">
+        </div>
+        <!--banner header-->
+        <div class="box-banner col-lg-6 col-sm-12 d-flex align-items-center">
+          <img class="banner-header" src="/src/assets/img/header-banner.webp" alt="">
+        </div>
+      </div>
+    </div>
+    <hr class="m-0">
+    <!--Navbar-->
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-2 d-flex align-items-center">
+          <a href="#"><i class="bi bi-list fs-2"></i></a>
+        </div>
+        <div class="col-8 d-flex align-items-center justify-content-center">
+          <ul class="m-0" v-for="(nav, index) in navLink">
+            <a href="#"><li>{{navLink[index].name }}</li></a>
+          </ul>
+        </div>
+        <div class="col-2 d-flex align-items-center justify-content-end">
+          <a href="#"><i class="bi bi-search fs-2"></i></a>
+        </div>
+      </div>
+    </div>
+    </header>
+  </template>
 
-  </div>
+<style lang="scss" scoped>
+@use 'bootstrap/scss/bootstrap.scss' as *;
 
-</template>
+a{
+  text-decoration: none;
+  color: black;
+  &
+  :hover{
+    color: #BF1D2E;
+  }
+}
 
-<style scoped>
-div{
-  height: 200px;
-  border: 1px dashed purple;
+#logo{
+  object-fit: contain;
+  width: 250px;
+}
+.banner-header{
+    border-radius: 5px;
+    width: 100%;
+    height: 90px;
+}
+
+
+li{
+  list-style-type: none;
+  font-size: 20px;
+}
+
+a.nav-link:hover{
+  color: #BF1D2E
 }
 </style>
