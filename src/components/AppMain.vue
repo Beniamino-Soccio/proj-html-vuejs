@@ -27,12 +27,24 @@ export default {
 
 <MainGallery />
 <MainNews />
+<div class="banner d-flex justify-content-center align-items-center">
+  <img src="../assets/img/page-banner-1.webp" alt="">
+</div>
 <MainPost />
 <MainSlider />
-<MainThumbs />
 <MainTrailer />
+<MainThumbs />
 
 </template>
 
 <style scoped>
+.banner{
+  padding: 30px 0;
+  background-color: #f3f3f3;
+}
+.banner img{
+  width: 1200px;
+  height: 110px;
+  border-radius: 5px;
+}
 </style>
