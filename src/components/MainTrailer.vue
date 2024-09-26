@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      activeVideo: 0,
       videos:[
         {
           url: "https://www.youtube.com/embed/9rYkZlt2hHE?si=3dtJ99zCLUHm3fv6",
@@ -50,6 +51,12 @@ export default {
       ]
 
     }
+  },
+  methods: {
+    selectVideo(video) {
+            this.activeVideo = video; 
+        },
+    
   }
 }
 </script>
@@ -58,7 +65,8 @@ export default {
   <div class="base">
     <div class="container d-flex">
       <div class="current-video">
-        <iframe src="https://www.youtube.com/embed/9rYkZlt2hHE?si=3dtJ99zCLUHm3fv6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+        <iframe :src="activeVideo.url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
+      </div>
       <div class="playlist-video">
         <div class="info-playlist d-flex align-items-center px-4">
           <div class="d-flex flex-column">
@@ -68,7 +76,7 @@ export default {
           </div>
         </div>
         <ul>
-          <li class="d-flex align-items-center gap-3" v-for="video in videos">
+          <li class="d-flex align-items-center gap-3" v-for="(video, index) in videos" @click="selectVideo(video)">
             <p class="text-center">{{video.index}}</p>
             <img :src="video.img" :alt="video.name">
             <p>{{video.name}}</p>
