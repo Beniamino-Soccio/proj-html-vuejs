@@ -51,8 +51,7 @@ export default {
       <div 
         class="p-2 thumb-card" 
         v-for="(category, index) in categories" 
-        :key="index"
-        style="flex-basis: 30%;">
+        :key="index">
         <div class="card h-100 position-relative">
           <a :href="category.link">
             <div class="card-img-overlay d-flex align-items-center justify-content-center">
@@ -77,6 +76,7 @@ export default {
 
 .thumb-card {
   position: relative;
+  flex-basis: 30%;
 }
 
 .card-img-overlay {
@@ -95,10 +95,12 @@ export default {
 }
 
 .card img {
-  transition: transform 0.2s ease;
-  height: 200px;
-  object-fit: cover;
+  transition: transform 0.2s ease; 
+  
 }
+
+img{}
+
 
 .card:hover {
   background-color: red; 
