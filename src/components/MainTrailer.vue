@@ -100,6 +100,7 @@ ul{
 li{
   border-bottom: 1px solid #7c7c7c;
   padding: 12px;
+  cursor: pointer;
 }
 ul img{
   width: 85px;
