@@ -3,6 +3,7 @@ export default {
   data() {
     return {
       
+
     }
   }
 }
@@ -122,7 +123,7 @@ export default {
 .bottoni{
   position: absolute;
   top: 20px;
-  left: 10px;
+  transform: translateX(-50%, -50%);
 }
 
 
