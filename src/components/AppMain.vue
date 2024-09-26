@@ -3,17 +3,17 @@ import MainGallery from "./MainGallery.vue";
 import MainNews from ".//MainNews.vue";
 import MainPost from "./MainPost.vue";
 import MainSlider from "./MainSlider.vue";
-import MainThumbs from "./MainThumbs.vue";
 import MainTrailer from "./MainTrailer.vue";
+import MainThumbs from "./MainThumbs.vue";
 
 export default {
   components: {
     MainGallery,
     MainNews,
     MainPost,
-    MainSlider,
-    MainThumbs,
+    MainSlider,    
     MainTrailer,
+    MainThumbs,
   },
   data() {
     return {
@@ -32,6 +32,7 @@ export default {
   <img src="../assets/img/page-banner-1.webp" alt="">
 </div>
 <MainPost />
+<MainSlider />
 <MainTrailer />
 <MainThumbs />
 
