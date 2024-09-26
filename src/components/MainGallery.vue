@@ -27,7 +27,6 @@ export default {
         },
       ]
       
-
     }
   }
 }
@@ -42,9 +41,6 @@ export default {
             <button class="btn btn-light me-2">Lifestyle</button>
             <button class="btn btn-light me-2">Fashion</button>
           </div>
-          <p>ciao</p>
-          <p>{{ messages[0].name }}</p>
-
         </div>
         <div class="ld">
           <div class="bottoni">
@@ -150,13 +146,7 @@ export default {
 .bottoni{
   position: absolute;
   top: 20px;
-  transform: translateX(-50%, -50%);
-}
-
-p{
-  position: absolute;
-  font-size: 12px;
-  color: white;
+  left: 10px;
 }
 
 
