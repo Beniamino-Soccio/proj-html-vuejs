@@ -144,8 +144,7 @@ body {
 .append-buttons button {
   display: inline-block;
   cursor: pointer;
-  border: 1px solid #007aff;
-  color: #007aff;
+  color: black;
   text-decoration: none;
   padding: 4px 10px;
   border-radius: 4px;
@@ -168,5 +167,7 @@ body {
 
 button {
   background-color: #BF1D2F;
+  border-radius: 15px;
+  padding: 1px 40px;
 }
 </style>
