@@ -134,4 +134,10 @@ p{
 i{
   font-size: 50px;
 }
+li:hover{
+  color: red;
+}
+li:hover p:first-child{
+  background-color: red;
+}
 </style>
