@@ -38,21 +38,26 @@ export default {
     </div>
     <div class="row box">
       <div class="col box-left ps-0">
-        <img src="/src/assets/img/music-love.webp" alt="">
+        <a href="#"><img src="/src/assets/img/music-love.webp" alt="Music Love"></a>
       </div>
+
       <div class="col d-flex flex-column">
         <!--lifestyle stories card-->
         <div class="lifestyle-stories-card d-flex align-items-center gap-4" v-for="(card, index) in lifestyleStoriesCard" :key="index">
+
           <!--Immagine della card-->
-          <img class="img-card me-3" :src="card.img" alt="">
+          <a href="#"><img class="img-card me-3" :src="card.img" :alt="card.title"></a>
+
           <!--Badge dell'immagine-->
           <p class="badge-card">{{ card.badge }}</p>
+
           <!--Info card-->
           <div class="info-card">
             <span class="me-3"><i class="bi bi-person-fill"></i> {{ card.author }}</span>
             <span><i class="bi bi-calendar2-fill"></i> {{ card.date }}</span>
             <p>{{ card.title }}</p>
           </div>
+ 
         </div>
       </div>
     </div>
@@ -70,12 +75,14 @@ h3{
 .box-left img{
   height: 500px;
   width: 100%;
+  cursor: pointer;
 }
 .img-card{
   object-fit: contain;
   max-width: 200px;
   border-radius: 5px;
   margin-bottom: 25px;
+  cursor: pointer;
   
 }
 .badge-card{
@@ -86,6 +93,7 @@ h3{
   border-radius: 5px;
   padding: 2px 15px;
   font-weight: bold;
+  cursor: pointer;
 }
 .badge-card:hover{
   color: #BF1D2E;
@@ -102,6 +110,7 @@ h3{
   font-weight: bold;
   span{
     color: #545454;
+    cursor: pointer;
   }
   &
   :hover{
@@ -123,5 +132,9 @@ img{
 }
 img:hover{
   filter: brightness(60%)
+}
+
+p{
+  cursor: pointer;
 }
 </style>
