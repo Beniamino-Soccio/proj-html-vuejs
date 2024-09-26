@@ -25,13 +25,13 @@ export default {
 
 <template>
 
+<MainSlider />
 <MainGallery />
 <MainNews />
 <div class="banner d-flex justify-content-center align-items-center">
   <img src="../assets/img/page-banner-1.webp" alt="">
 </div>
 <MainPost />
-<MainSlider />
 <MainTrailer />
 <MainThumbs />
 
