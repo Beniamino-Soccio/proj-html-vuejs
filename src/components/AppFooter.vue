@@ -53,7 +53,7 @@ export default {
         </div>
       </div>
       <hr>
-      <div class="row mt- justify-content-between align-items-center">
+      <div class="row mt-4 justify-content-between align-items-center">
         <div class="col-md-6">
           <img class="logo" src="/src/assets/img/anime-whitelogo.png" alt="Anime Tech Logo">
         </div>
@@ -64,6 +64,7 @@ export default {
     </div>          
   </footer>
 </template>
+
 <style scoped>
 footer {
   color: #ffffff;
@@ -75,6 +76,12 @@ footer {
 
 .footer a {
   text-decoration: none;
+  color: #0a0202;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: grey !important;
 }
 
 .list {
