@@ -71,13 +71,17 @@ export default {
 
 <template>
   <div class="container">
+    <h3>FEATURED POST</h3>
     <swiper ref="{swiperRef}" :slidesPerView="3" :loop="true" :centeredSlides="false" :spaceBetween="30"
       :navigation="true" :modules="modules" class="mySwiper">
       <swiper-slide class="card" v-for="(card, index) in cardList" :key="index">
         <img :src="card.image" class="card-img-top" alt="">
-        <p class="mt-3 mb-0 title"> {{ card.title }} </p>
-        <p class="date"> {{ card.date }} </p>
-        <p class="lorem"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+        <div class="card-body">
+          <p class="mb-0 fw-bold title"> {{ card.title }} </p>
+          <p class="mb-1 date"> {{ card.date }} </p>
+          <p class="lorem"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <button class="btn text-white">Read More</button>
+        </div>
       </swiper-slide>
     </swiper>
     <p class="append-buttons"></p>
@@ -129,7 +133,6 @@ body {
 
 .swiper {
   width: 100%;
-  height: 300px;
   margin: 20px auto;
 }
 
@@ -159,6 +162,11 @@ body {
 }
 
 .date {
-  font-size: 13px
+  font-size: 13px;
+  color: #545454;
+}
+
+button {
+  background-color: #BF1D2F;
 }
 </style>
