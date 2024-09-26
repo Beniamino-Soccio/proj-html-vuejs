@@ -46,7 +46,7 @@ export default {
 </script>
 
 <template>
-  <div class="container-sm py-5">
+  <div class="container-fluid py-5">
     <div class="d-flex justify-content-center g-4">
       <div 
         class="p-2 thumb-card" 
@@ -73,10 +73,7 @@ export default {
   </div>
 </template>
 <style scoped>
-.container-sm {
-  max-width: 1400px;
-  height: 250px;
-}
+
 
 .thumb-card {
   position: relative;
@@ -99,8 +96,8 @@ export default {
 
 .card img {
   transition: transform 0.2s ease;
-  width: 206px;
-  height: 170px;
+  height: 200px;
+  object-fit: cover;
 }
 
 .card:hover {
