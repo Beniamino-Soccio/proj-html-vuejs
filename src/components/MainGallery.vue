@@ -2,6 +2,30 @@
 export default {
   data() {
     return {
+      messages:[
+        {
+          nome:'demo',
+          data:'December25,2022',
+          text:'Fashion Trend Now A Day'
+        },
+        {
+          nome:'demo',
+          data:'December26,2022',
+          text:'Traveling Alone Is Awesome'
+        }, {
+          nome:'demo',
+          data:'December25,2022',
+          text:'Place For A Road Trip'
+        }, {
+          nome:'demo',
+          data:'December25,2022',
+          text:'Music The Love Of My Life'
+        }, {
+          nome:'demo',
+          data:'December26,2022',
+          text:'Reason To Visit France'
+        },
+      ]
       
 
     }
@@ -18,6 +42,9 @@ export default {
             <button class="btn btn-light me-2">Lifestyle</button>
             <button class="btn btn-light me-2">Fashion</button>
           </div>
+          <p>ciao</p>
+          <p>{{ messages[0].name }}</p>
+
         </div>
         <div class="ld">
           <div class="bottoni">
@@ -124,6 +151,12 @@ export default {
   position: absolute;
   top: 20px;
   transform: translateX(-50%, -50%);
+}
+
+p{
+  position: absolute;
+  font-size: 12px;
+  color: white;
 }
 
 
