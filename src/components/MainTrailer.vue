@@ -68,11 +68,11 @@ export default {
         <iframe :src="activeVideo.url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      
       </div>
       <div class="playlist-video">
-        <div class="info-playlist d-flex align-items-center px-4">
+        <div class="info-playlist d-flex align-items-center px-3">
+          <i class="bi bi-play-fill text-white"></i>
           <div class="d-flex flex-column">
-            <p>video playlist</p> 
-            <p>1/7</p>
-
+            <p>Video Playlist</p> 
+            <p class="fs-6">1/7</p>
           </div>
         </div>
         <ul>
@@ -130,5 +130,8 @@ p{
 }
 .playlist-video{
   height: 550px;
+}
+i{
+  font-size: 50px;
 }
 </style>
