@@ -95,13 +95,15 @@ export default {
     <h3 class="my-4">FEATURED POST</h3>
     <swiper ref="{swiperRef}" :slidesPerView="3" :loop="true" :centeredSlides="false" :spaceBetween="30"
       :navigation="true" :modules="modules" class="mySwiper">
-      <swiper-slide class="card" v-for="(card, index) in cardList" :key="index">
-        <img :src="card.image" class="card-img-top" alt="">
+      <swiper-slide class="card position-relative" v-for="(card, index) in cardList" :key="index">
+        <img :src="card.image" class="card-img-top" alt="post's image">
+        <button class="first-topic position-absolute border-0"> {{ card.firstTopic }} </button>
+        <button class="second-topic position-absolute border-0"> {{ card.secondTopic }} </button>
         <div class="card-body">
           <p class="mb-0 fw-bold title"> {{ card.title }} </p>
           <p class="mb-1 date"> {{ card.date }} </p>
           <p class="lorem"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          <button class="btn text-white">Read More</button>
+          <button class="btn text-white read-more">Read More</button>
         </div>
       </swiper-slide>
     </swiper>
@@ -173,6 +175,11 @@ body {
   font-size: 13px;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  color: black;
+}
+
 .lorem {
   font-size: 12px;
 }
@@ -186,9 +193,25 @@ body {
   color: #545454;
 }
 
-button {
+.read-more {
   background-color: #BF1D2F;
   border-radius: 15px;
   padding: 1px 40px;
+}
+
+.first-topic,
+.second-topic {
+  top: 10px;
+  font-size: 15px;
+  padding: 0 20px;
+  border-radius: 15px;
+}
+
+.first-topic {
+  left: 25%;
+}
+
+.second-topic {
+  left: 55%;
 }
 </style>
