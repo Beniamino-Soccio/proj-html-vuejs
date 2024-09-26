@@ -1,4 +1,7 @@
 <script>
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
 export default {
   data() {
     return {
@@ -44,20 +47,48 @@ export default {
 
 <template>
   <section class="container py-5">
-    <h3>FEATURED POSTS</h3>
+    <div class="top-post d-flex justify-content-between">
+      <h3>FEATURED POSTS</h3>
+      <div class="change d-flex gap-3">
+        <i class="bi bi-caret-left-square-fill"></i>
+        <i class="bi bi-caret-right-square-fill"></i>
+      </div>
+    </div>
     <div class="py-4 text-center">
       <div class="row">
-
-        <div v-for="(card, index) in cardList" :key="index" class="card col">
-          <img :src='card.image' class="card-img-top" alt="immagine">
-          <div class="card-body">
-            <h5 class="card-title"> {{ card.title }} </h5>
-            <h6>December 26,2022</h6>
-            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="#" class="btn btn-primary">Read More</a>
+        <div class="col-4">
+          <div class="card">
+            <img :src='cardList[0].image' class="card-img-top" alt="immagine">
+            <div class="card-body">
+              <h5 class="card-title"> {{ cardList[0].title }} </h5>
+              <h6>December 26,2022</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
           </div>
         </div>
-
+        <div class="col-4">
+          <div class="card">
+            <img :src='cardList[1].image' class="card-img-top" alt="immagine">
+            <div class="card-body">
+              <h5 class="card-title"> {{ cardList[1].title }} </h5>
+              <h6>December 26,2022</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card">
+            <img :src='cardList[2].image' class="card-img-top" alt="immagine">
+            <div class="card-body">
+              <h5 class="card-title"> {{ cardList[2].title }} </h5>
+              <h6>December 26,2022</h6>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
