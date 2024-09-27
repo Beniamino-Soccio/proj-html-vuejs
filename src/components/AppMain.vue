@@ -43,7 +43,7 @@ export default {
   background-color: #f3f3f3;
 }
 .banner img{
-  width: 1200px;
+  width: 1300px;
   height: 110px;
   border-radius: 5px;
 }
