@@ -82,7 +82,7 @@ export default {
 
     <div class="d-flex justify-content-between align-items-center mb-5">
         <h3 class="p-0 fw-semibold">LIFESTYLE & STORIES</h3>      
-        <div class="category-buttons">
+        <div class="category-buttons fw-semibold">
 
           <button class="btn category-btn" :class="{ active: selectedCategory === 'ALL' }" @click="changeCategory('ALL')">ALL</button>
           <button class="btn category-btn" :class="{ active: selectedCategory === 'LIFESTYLE' }" @click="changeCategory('LIFESTYLE')">LIFESTYLE</button>
@@ -99,7 +99,7 @@ export default {
       <div class="col-7 box-left pe-0">
         <a href="#">
           <img :src="mainImage.img" :alt="mainImage.title">
-          <span class="badge-card main-badge">{{ mainImage.badge }}</span>
+          <span class="badge-card main-badge fw-semibold">{{ mainImage.badge }}</span>
         </a>
         <div v-if="!isLoading" class="main-info text-white">
           <p class="main-info-text">
@@ -114,7 +114,7 @@ export default {
         <div class="lifestyle-stories-card d-flex align-items-center gap-3" v-for="(card, index) in rightSideCards" :key="index">
           <a href="#"><img class="img-card me-3" :src="card.img" :alt="card.title"></a>
           <div class="info-card text-secondary fw-semibold">
-            <span class="badge-card">{{ card.badge }}</span>
+            <span class="badge-card fw-semibold">{{ card.badge }}</span>
             <p><i class="bi bi-person-fill"></i> {{ card.author }} <i class="bi bi-calendar2-fill"></i> {{ card.date }}</p>
             <p>{{ card.title }}</p>
           </div>
@@ -129,7 +129,6 @@ export default {
 @use 'bootstrap/scss/bootstrap.scss' as *;
 
 .info-card{
-  font-weight: bold;
   span{
     color: #545454;
     cursor: pointer;
@@ -190,7 +189,6 @@ export default {
   background-color: white;
   border-radius: 5px;
   padding: 2px 15px;
-  font-weight: bold;
   z-index: 1; 
 }
 
@@ -218,7 +216,6 @@ export default {
   background-color: white;
   border-radius: 5px;
   padding: 2px 15px;
-  font-weight: bold;
   cursor: pointer;
 }
 
@@ -284,7 +281,6 @@ p {
 .category-btn {
   color: white;
   padding: 5px 15px;
-  font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: #333;
