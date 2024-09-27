@@ -64,7 +64,7 @@ components: {
     </div>
     <hr class="m-0">
     <!--Navbar-->
-    <div class="container py-3">
+    <div class="container">
       <div class="row">
         <div class="col-2 d-flex align-items-center">
           <a href="#"><AnimatedBurgerMenuHeader/></a>
