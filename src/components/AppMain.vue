@@ -29,7 +29,9 @@ export default {
 <MainGallery />
 <MainNews />
 <div class="banner d-flex justify-content-center align-items-center">
-  <img src="../assets/img/page-banner-1.webp" alt="">
+  <div class="container p-0">
+    <img src="../assets/img/page-banner-1.webp" alt="">
+  </div>
 </div>
 <MainPost />
 <MainTrailer />
@@ -42,8 +44,8 @@ export default {
   padding: 30px 0;
   background-color: #f3f3f3;
 }
-.banner img{
-  width: 1300px;
+img{
+  width: 100%;
   height: 110px;
   border-radius: 5px;
 }
