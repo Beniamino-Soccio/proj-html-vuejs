@@ -25,42 +25,63 @@ export default {
         {
           title: 'Live Ideas You Might Be Anime',
           image: '/src/assets/img/ideas-anime.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Culture',
+          secondTopic: 'Stories'
         },
         {
           title: 'Reasons To Visit France',
           image: '/src/assets/img/visit-france.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Lifestyle',
+          secondTopic: 'Travel'
         },
         {
           title: 'Traveling Alone Is Awesome',
           image: '/src/assets/img/travel-alone-300x200.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Stories',
+          secondTopic: 'Travel'
         },
         {
           title: 'The Best Success Stories',
           image: '/src/assets/img/success-story.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Culture',
+          secondTopic: 'Stories'
         },
         {
           title: 'Places For A Road Trip',
           image: '/src/assets/img/best-places-300x200.webp',
-          date: 'December 25, 2022'
+          date: 'December 25, 2022',
+          firstTopic: 'Lifestyle',
+          secondTopic: 'Stories'
         },
         {
           title: 'Music The Love Of My Life',
           image: '/src/assets/img/music-love.webp',
-          date: 'December 25, 2022'
+          date: 'December 25, 2022',
+          firstTopic: 'Culture',
+          secondTopic: 'Lifestyle'
         },
         {
           title: 'Fashion Trend Now A Days',
           image: '/src/assets/img/anime-fashion.webp',
-          date: 'December 25, 2022'
+          date: 'December 25, 2022',
+          firstTopic: 'Fashion',
+          secondTopic: 'Lifestyle'
         },
         {
           title: 'The Best Winter Outfits',
           image: '/src/assets/img/winter.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Fashion'
+        },
+        {
+          title: 'Beginner Photographer\'s Mistakes',
+          image: '/src/assets/img/photographers-mistakes.webp',
+          date: 'December 26, 2022',
+          firstTopic: 'Fashion'
         },
       ]
     };
@@ -71,16 +92,25 @@ export default {
 
 <template>
   <div class="container">
-    <h3>FEATURED POST</h3>
+    <div class="top-post d-flex justify-content-between">
+      <h3 class="my-4 fw-bold">FEATURED POST</h3>
+      <div class="arrows d-flex position-relative text-center">
+        <div class="custom-prev"><i class="bi bi-caret-left-fill position-absolute rounded-circle prev"></i></div>
+        <div class="custom-next"><i class="bi bi-caret-right-fill position-absolute rounded-circle next"></i></div>
+      </div>
+    </div>
+
     <swiper ref="{swiperRef}" :slidesPerView="3" :loop="true" :centeredSlides="false" :spaceBetween="30"
-      :navigation="true" :modules="modules" class="mySwiper">
-      <swiper-slide class="card" v-for="(card, index) in cardList" :key="index">
-        <img :src="card.image" class="card-img-top" alt="">
+      :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :modules="modules" class="mySwiper">
+      <swiper-slide class="card position-relative" v-for="(card, index) in cardList" :key="index">
+        <img :src="card.image" class="card-img-top" alt="post's image">
+        <button class="first-topic position-absolute border-0"> {{ card.firstTopic }} </button>
+        <button class="second-topic position-absolute border-0"> {{ card.secondTopic }} </button>
         <div class="card-body">
           <p class="mb-0 fw-bold title"> {{ card.title }} </p>
           <p class="mb-1 date"> {{ card.date }} </p>
           <p class="lorem"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          <button class="btn text-white">Read More</button>
+          <button class="btn text-white read-more">Read More</button>
         </div>
       </swiper-slide>
     </swiper>
@@ -152,6 +182,15 @@ body {
   font-size: 13px;
 }
 
+::v-deep .swiper-button-next,
+::v-deep .swiper-button-prev {
+  color: black;
+}
+
+::v-deep .swiper-pagination-bullet {
+  background-color: black;
+}
+
 .lorem {
   font-size: 12px;
 }
@@ -165,9 +204,57 @@ body {
   color: #545454;
 }
 
-button {
+.read-more {
   background-color: #BF1D2F;
   border-radius: 15px;
   padding: 1px 40px;
+}
+
+.first-topic,
+.second-topic {
+  top: 10px;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 5px;
+}
+
+.first-topic:hover {
+  color: red;
+}
+
+.second-topic:hover {
+  color: red;
+}
+
+.first-topic {
+  left: 25%;
+}
+
+.second-topic {
+  left: 55%;
+}
+
+.arrows i {
+  background-color: #333333;
+  width: 35px;
+  height: 35px;
+  top: 20px;
+  color: white;
+  line-height: 35px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.6s;
+}
+
+i:hover {
+  background-color: #BF1D2E;
+}
+
+.prev {
+  right: 50px;
+}
+
+.next {
+  right: 0;
 }
 </style>

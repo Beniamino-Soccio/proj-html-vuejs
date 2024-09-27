@@ -2,7 +2,7 @@
 export default {
   data() {
     return {
-      activeVideo: 0,
+      activeVideo: null,
       videos:[
         {
           url: "https://www.youtube.com/embed/9rYkZlt2hHE?si=3dtJ99zCLUHm3fv6",
@@ -56,8 +56,10 @@ export default {
     selectVideo(video) {
             this.activeVideo = video; 
         },
-    
-  }
+  },
+  created() {
+    this.activeVideo = this.videos[0];
+}
 }
 </script>
 

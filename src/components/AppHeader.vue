@@ -1,83 +1,55 @@
 <script>
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import NewUpdatesHeaderTop from './NewUpdatesHeaderTop.vue';
+import AnimatedBurgerMenuHeader from './AnimatedBurgerMenuHeader.vue';
 export default {
   data() {
     return {
     navLink: [
       {
         name:  'HOME',
-        url: ''
+        url: '',
+        icon: 'bi-house-fill'
        },
        { 
         name: 'ABOUT US',
-        url: ''
+        url: '',
+        icon: 'bi bi-person-fill'
        },
        { 
         name: 'LIFESTYLE',
-        url: ''
+        url: '',
+        icon: 'bi bi-suitcase-lg-fill'
        },
        { 
         name: 'STORIES',
-        url: ''
+        url: '',
+        icon: 'bi bi-book-fill'
        },
        {
         name: 'PAGES',
-        url: ''
+        url: '',
+        icon: 'bi bi-file-text-fill'
        },
        { 
         name: 'CONTACT US',
-        url: ''
+        url: '',
+        icon: 'bi bi-envelope-fill'
        },
     ],
-    newUpdates:[
-      {
-        img:'/src/assets/img/healthy-foods-150x150.webp',
-        hours: '05.32',
-        text: 'THE BEST HEALTHY FOODS'
-      },
-      {
-        img:'/src/assets/img/rice-ball-150x150.webp',
-        hours: '05.37',
-        text: 'HYGENIC RECEIPE TO PREPARE RICE'
-      },
-      {
-        img:'/src/assets/img/winter-150x150.webp',
-        hours: '05.29',
-        text: 'THE BEST WINTER OUTFITS'
-      },
-      {
-        img:'/src/assets/img/meal-time-150x150.webp',
-        hours: '05.35',
-        text: 'THE BEST TIME TO HAVE A MEAL'
-      },
-    ]
   }
-    }
+},
+components: {
+  NewUpdatesHeaderTop,
+  AnimatedBurgerMenuHeader
+}
   }
 </script>
 
 <template>
   <header>
-    <div class="news-updates d-flex align-items-center py-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-2 updates-text d-flex justify-content-center align-items-center py-2">
-            <p class="m-0">NEW UPDATES</p>
-            <img src="" alt="">
-          </div>
-          <div class="col-7 d-flex align-items-center">
-            QUI VA LA SCRITTA
-          </div>
-          <div class="social-icons col-3 d-flex justify-content-end align-items-center">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <NewUpdatesHeaderTop/>
     <div class="container my-3">
       <div class="row">
         <!--logo header-->
@@ -95,11 +67,15 @@ export default {
     <div class="container py-3">
       <div class="row">
         <div class="col-2 d-flex align-items-center">
-          <a href="#"><i class="bi bi-list fs-2"></i></a>
+          <a href="#"><AnimatedBurgerMenuHeader/></a>
         </div>
         <div class="col-8 d-flex align-items-center justify-content-center">
-          <ul class="m-0" v-for="(nav, index) in navLink">
-            <a href="#"><li>{{navLink[index].name }}</li></a>
+          <ul class="m-0" v-for="(nav, index) in navLink" :key="index">
+            <li>
+             <a :href="nav.url">
+               <span><i :class="[nav.icon]"></i> {{nav.name }}</span>
+             </a>
+           </li>
           </ul>
         </div>
         <div class="col-2 d-flex align-items-center justify-content-end">
@@ -113,21 +89,16 @@ export default {
 <style lang="scss" scoped>
 @use 'bootstrap/scss/bootstrap.scss' as *;
 
-.updates-text{
-  background-color: #545454;
-  color: white;
-  font-weight: bold;
-  height: 50px;
-}
-
-.news-updates{
-  background-color: #BF1D2E;
-  height: 50px;
-}
-
 a{
   text-decoration: none;
   color: black;
+  &
+  :hover{
+    color: #BF1D2E;
+  }
+}
+
+li{
   &
   :hover{
     color: #BF1D2E;
@@ -144,22 +115,12 @@ a{
     height: 90px;
 }
 
-
 li{
   list-style-type: none;
-  font-size: 20px;
+  font-weight: bold;
 }
 
 a.nav-link:hover{
   color: #BF1D2E
-}
-
-.social-icons i{
-  background-color: white;
-  border-radius: 50%;
-  padding: 5px 8px;
-  color: #BF1D2E;
-  font-size: 15px;
-  margin-right: 10px;
 }
 </style>
