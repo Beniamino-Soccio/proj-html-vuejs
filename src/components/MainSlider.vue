@@ -25,48 +25,87 @@ export default {
         {
           title: 'Live Ideas You Might Be Anime',
           image: '/src/assets/img/ideas-anime.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Culture',
+          secondTopic: 'Stories',
         },
         {
           title: 'Reasons To Visit France',
           image: '/src/assets/img/visit-france.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Lifestyle',
+          secondTopic: 'Travel',
         },
         {
           title: 'Traveling Alone Is Awesome',
           image: '/src/assets/img/travel-alone-300x200.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Stories',
+          secondTopic: 'Travel',
         },
         {
           title: 'The Best Success Stories',
           image: '/src/assets/img/success-story.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Culture',
+          secondTopic: 'Stories',
         },
         {
           title: 'Places For A Road Trip',
           image: '/src/assets/img/best-places-300x200.webp',
-          date: 'December 25, 2022'
+          date: 'December 25, 2022',
+          firstTopic: 'Lifestyle',
+          secondTopic: 'Stories',
+          thirdTopic: 'Travel',
         },
         {
           title: 'Music The Love Of My Life',
           image: '/src/assets/img/music-love.webp',
-          date: 'December 25, 2022'
+          date: 'December 25, 2022',
+          firstTopic: 'Culture',
+          secondTopic: 'Lifestyle',
         },
         {
           title: 'Fashion Trend Now A Days',
           image: '/src/assets/img/anime-fashion.webp',
-          date: 'December 25, 2022'
+          date: 'December 25, 2022',
+          firstTopic: 'Fashion',
+          secondTopic: 'Lifestyle',
         },
         {
           title: 'The Best Winter Outfits',
           image: '/src/assets/img/winter.webp',
-          date: 'December 26, 2022'
+          date: 'December 26, 2022',
+          firstTopic: 'Food',
+        },
+        {
+          title: 'The Best Winter Outfits',
+          image: '/src/assets/img/winter.webp',
+          date: 'December 26, 2022',
+          firstTopic: 'Food',
+        },
+        {
+          title: 'The Best Winter Outfits',
+          image: '/src/assets/img/winter.webp',
+          date: 'December 26, 2022',
+          firstTopic: 'Food',
+        },
+        {
+          title: 'The Best Winter Outfits',
+          image: '/src/assets/img/winter.webp',
+          date: 'December 26, 2022',
+          firstTopic: 'Fashion',
+        },
+        {
+          title: 'The Best Winter Outfits',
+          image: '/src/assets/img/winter.webp',
+          date: 'December 26, 2022',
+          firstTopic: 'Fashion',
         },
       ]
-    };
+    }
   },
-
-};
+}
 </script>
 
 <template>
@@ -75,8 +114,13 @@ export default {
   <div class="main-slider">
     <swiper ref="{swiperRef}" :slidesPerView="4" :loop="true" :centeredSlides="false" :spaceBetween="10"
     :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :modules="modules" class="mySwiper">
-      <swiper-slide class="card" v-for="(card, index) in cardList" :key="index">
+      <swiper-slide class="card position-relative" v-for="(card, index) in cardList" :key="index">
         <img :src="card.image" class="card-img-top" alt="">
+        <div class="d-flex badges-group position-absolute gap-2">
+          <button class="first-topic border-0">{{ card.firstTopic }}</button>
+          <button v-if="card.secondTopic" class="second-topic border-0" >{{ card.secondTopic }}</button>
+          <button v-if="card.thirdTopic"class="third-topic border-0">{{ card.thirdTopic }}</button>
+        </div>
         <div class="card-body">
           <p class="mb-0 fw-bold title"> {{ card.title }} </p>
           <p class="mb-1 date"> {{ card.date }} </p>
@@ -164,22 +208,9 @@ body {
   padding: 15px 30px;
   position: relative;
 }
-/*::v-deep div.swiper-button-next,
-::v-deep div.swiper-button-prev {
-  color: red;
-  font-weight: bold;
-  background-color: #fff;
-  border-radius: 50%;
-  height: 25px;
-}
-.custom-prev, .custom-next{
-  font-size: 18px;
-  color: #b12232;
-} */
 .bi{
   font-size: 18px;
-  color: #b12232;
-  font-weight: bold;
+  color: #bf1d2e;
   background-color: #fff;
   border-radius: 50%;
   height: 35px;
@@ -191,6 +222,7 @@ body {
   z-index: 2;
   transition-property: background-color;
   transition-duration: 0.6s;
+  cursor: pointer;
 }
 .bi-caret-left-fill{
   left: 50px;
@@ -200,6 +232,19 @@ body {
 }
 .bi:hover{
   color: white;
-  background-color: #b12232;
+  background-color: #bf1d2e;
+}
+.card-body p{
+  font-size: 16px;
+}
+.card-body p:first-child{
+  font-size: 18px;
+}
+.badges-group{
+  top: 10px;
+}
+.first-topic, .second-topic, .third-topic{
+  padding: 2px 15px;
+  border-radius: 5px;
 }
 </style>
