@@ -11,6 +11,8 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "install": "^0.13.0",
+    "swiper": "^11.1.14",
     "vue": "^3.4.37"
   },
   "devDependencies": {
