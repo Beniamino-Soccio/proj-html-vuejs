@@ -239,7 +239,7 @@ export default {
   justify-content: center;  
   align-items: center;      
   position: absolute;
-  bottom: 0;                
+  bottom: 15px;                
   left: 50%;
   transform: translateX(-50%); 
   width: 100%;
