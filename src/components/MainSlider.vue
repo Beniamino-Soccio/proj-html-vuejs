@@ -70,9 +70,11 @@ export default {
 </script>
 
 <template>
+  <div class="custom-prev"><i class="bi bi-caret-left-fill"></i></div>
+  <div class="custom-next"><i class="bi bi-caret-right-fill"></i></div>
   <div class="main-slider">
     <swiper ref="{swiperRef}" :slidesPerView="4" :loop="true" :centeredSlides="false" :spaceBetween="10"
-      :navigation="true" :modules="modules" class="mySwiper">
+    :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :modules="modules" class="mySwiper">
       <swiper-slide class="card" v-for="(card, index) in cardList" :key="index">
         <img :src="card.image" class="card-img-top" alt="">
         <div class="card-body">
@@ -160,8 +162,9 @@ body {
 .main-slider{
   background-color: #f3f3f3;
   padding: 15px 30px;
+  position: relative;
 }
-::v-deep div.swiper-button-next,
+/*::v-deep div.swiper-button-next,
 ::v-deep div.swiper-button-prev {
   color: red;
   font-weight: bold;
@@ -169,12 +172,34 @@ body {
   border-radius: 50%;
   height: 25px;
 }
-.custom-prev{
-  font-size: 26px;
-  color: red;
+.custom-prev, .custom-next{
+  font-size: 18px;
+  color: #b12232;
+} */
+.bi{
+  font-size: 18px;
+  color: #b12232;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  position: absolute;
+  top: 400px;
+  z-index: 2;
+  transition-property: background-color;
+  transition-duration: 0.6s;
 }
-.custom-next{
-font-size: 26px;
-color: red;
+.bi-caret-left-fill{
+  left: 50px;
+}
+.bi-caret-right-fill{
+  right: 50px;
+}
+.bi:hover{
+  color: white;
+  background-color: #b12232;
 }
 </style>
