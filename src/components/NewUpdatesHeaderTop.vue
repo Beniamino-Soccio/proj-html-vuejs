@@ -80,7 +80,7 @@ export default {
 }
 
 .current-new-updates{
-  height: 50px;
+  height: 40px;
 }
 
 .current-new-updates img{
@@ -91,12 +91,12 @@ export default {
   background-color: #545454;
   color: white;
   font-weight: bold;
-  height: 50px;
+  height: 40px;
 }
 
 .news-updates{
   background-color: #BF1D2E;
-  height: 50px;
+  height: 40px;
 }
 
 .social-icons i{
