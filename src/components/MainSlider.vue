@@ -73,20 +73,20 @@ export default {
           secondTopic: 'Lifestyle',
         },
         {
-          title: 'The Best Winter Outfits',
-          image: '/src/assets/img/winter.webp',
+          title: 'Hygenic receipe to prepare rice',
+          image: 'src/assets/img/rice-ball.webp',
           date: 'December 26, 2022',
           firstTopic: 'Food',
         },
         {
-          title: 'The Best Winter Outfits',
-          image: '/src/assets/img/winter.webp',
+          title: 'The Best Time To Have A Meal',
+          image: 'https://demo.hasnaindev.com/animetech/wp-content/uploads/2022/12/meal-time.webp',
           date: 'December 26, 2022',
           firstTopic: 'Food',
         },
         {
-          title: 'The Best Winter Outfits',
-          image: '/src/assets/img/winter.webp',
+          title: 'The Best Healty Food',
+          image: 'src/assets/img/healthy-foods.webp',
           date: 'December 26, 2022',
           firstTopic: 'Food',
         },
@@ -97,8 +97,8 @@ export default {
           firstTopic: 'Fashion',
         },
         {
-          title: 'The Best Winter Outfits',
-          image: '/src/assets/img/winter.webp',
+          title: "Beginner Photographer's Mistakes",
+          image: 'src/assets/img/photographers-mistakes.webp',
           date: 'December 26, 2022',
           firstTopic: 'Fashion',
         },
@@ -246,5 +246,8 @@ body {
 .first-topic, .second-topic, .third-topic{
   padding: 2px 15px;
   border-radius: 5px;
+}
+img{
+  max-height: 260px;
 }
 </style>
