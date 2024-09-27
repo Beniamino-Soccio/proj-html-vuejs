@@ -126,7 +126,7 @@ h3{
 .lifestyle-stories-card:last-child{
   border-color: transparent;
 }
-
+// effetto hover
 img{
   filter: brightness(50%);
 }
