@@ -218,6 +218,14 @@ body {
   border-radius: 5px;
 }
 
+.first-topic:hover {
+  color: red;
+}
+
+.second-topic:hover {
+  color: red;
+}
+
 .first-topic {
   left: 25%;
 }
