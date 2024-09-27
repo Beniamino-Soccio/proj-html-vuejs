@@ -41,7 +41,12 @@ export default {
         this.currentIndex = this.newUpdates.length - 1;
       }
       }
-    }
+    },
+    mounted() {
+      this.updateInterval = setInterval(() => {
+      this.nextUpdate();
+  }, 5000);
+},
 }
 </script>
 
