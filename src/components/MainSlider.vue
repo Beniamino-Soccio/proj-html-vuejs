@@ -122,7 +122,7 @@ export default {
         </div>
         <div class="card-body p-2">
           <p class="mb-0 fw-bold title"> {{ card.title }} </p>
-          <p class="mb-1 date"> {{ card.date }} </p>
+          <p class="mb-1 date fw-semibold"> {{ card.date }} </p>
         </div>
       </swiper-slide>
     </swiper>
@@ -235,6 +235,7 @@ body {
 }
 .card-body p{
   font-size: 16px;
+  cursor: pointer;
 }
 .card-body p:first-child{
   font-size: 18px;
@@ -248,5 +249,9 @@ body {
 }
 img{
   height: 300px;
+  cursor: pointer;
+}
+.card-body p:hover, .badges-group button:hover{
+  color: #bf1d2e;
 }
 </style>
