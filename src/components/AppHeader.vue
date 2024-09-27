@@ -1,7 +1,6 @@
 <script>
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { getCurrentInstance } from 'vue';
 export default {
   data() {
     return {
@@ -61,7 +60,11 @@ export default {
         this.currentIndex = (this.currentIndex + 1) % this.newUpdates.length;
       },
       prevUpdate(){
-        this.currentIndex = (this.currentIndex - 1) % this.newUpdates.length;
+        if (this.currentIndex > 0) {
+        this.currentIndex--;
+      } else {
+        this.currentIndex = this.newUpdates.length - 1;
+      }
       }
     }
   }
@@ -83,6 +86,8 @@ export default {
           </div>
           <!--Social Icon-->
           <div class="social-icons col-3 d-flex justify-content-end align-items-center">
+            <div @click="prevUpdate"><i class="bi bi-arrow-bar-left"></i></div>
+            <div @click="nextUpdate"><i class="bi bi-arrow-bar-right me-5"></i></div>
             <a href="#"><i class="bi bi-facebook"></i></a>
             <a href="#"><i class="bi bi-twitter-x"></i></a>
             <a href="#"><i class="bi bi-instagram"></i></a>
@@ -126,6 +131,9 @@ export default {
 <style lang="scss" scoped>
 @use 'bootstrap/scss/bootstrap.scss' as *;
 
+.bi-arrow-bar-left, .bi-arrow-bar-right{
+  cursor: pointer;
+}
 
 .current-new-updates{
   height: 50px;
