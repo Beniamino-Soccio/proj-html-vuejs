@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default {
   components: {
@@ -20,7 +20,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Pagination, Navigation],
+      modules: [Autoplay, Pagination, Navigation],
       cardList: [
         {
           title: 'Live Ideas You Might Be Anime',
@@ -101,14 +101,15 @@ export default {
     </div>
 
     <swiper ref="{swiperRef}" :slidesPerView="3" :loop="true" :centeredSlides="false" :spaceBetween="30"
-      :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :modules="modules" class="mySwiper">
+      :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :modules="modules" class="mySwiper"
+      :autoplay="{ delay: 4000 }">
       <swiper-slide class="card position-relative" v-for="(card, index) in cardList" :key="index">
         <img :src="card.image" class="card-img-top" alt="post's image">
         <button class="first-topic position-absolute border-0"> {{ card.firstTopic }} </button>
         <button class="second-topic position-absolute border-0"> {{ card.secondTopic }} </button>
         <div class="card-body">
           <p class="mb-0 fw-bold title"> {{ card.title }} </p>
-          <p class="mb-1 date"> {{ card.date }} </p>
+          <p class="mb-1 fw-semibold date"> {{ card.date }} </p>
           <p class="lorem"> Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
           <button class="btn text-white read-more">Read More</button>
         </div>
@@ -223,11 +224,19 @@ body {
 }
 
 .first-topic:hover {
-  color: red;
+  color: #BF1D2E;
 }
 
 .second-topic:hover {
-  color: red;
+  color: #BF1D2E;
+}
+
+.date:hover {
+  color: #BF1D2E;
+}
+
+.title:hover {
+  color: #BF1D2E;
 }
 
 .first-topic {
