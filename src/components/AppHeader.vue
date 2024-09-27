@@ -1,6 +1,7 @@
 <script>
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import NewUpdatesHeaderTop from './NewUpdatesHeaderTop.vue';
 export default {
   data() {
     return {
@@ -30,54 +31,17 @@ export default {
         url: ''
        },
     ],
-    newUpdates:[
-      {
-        img:'/src/assets/img/healthy-foods-150x150.webp',
-        hours: '05.32',
-        text: 'THE BEST HEALTHY FOODS'
-      },
-      {
-        img:'/src/assets/img/rice-ball-150x150.webp',
-        hours: '05.37',
-        text: 'HYGENIC RECEIPE TO PREPARE RICE'
-      },
-      {
-        img:'/src/assets/img/winter-150x150.webp',
-        hours: '05.29',
-        text: 'THE BEST WINTER OUTFITS'
-      },
-      {
-        img:'/src/assets/img/meal-time-150x150.webp',
-        hours: '05.35',
-        text: 'THE BEST TIME TO HAVE A MEAL'
-      },
-    ]
   }
-    }
+},
+components: {
+  NewUpdatesHeaderTop
+}
   }
 </script>
 
 <template>
   <header>
-    <div class="news-updates d-flex align-items-center py-2">
-      <div class="container">
-        <div class="row">
-          <div class="col-2 updates-text d-flex justify-content-center align-items-center py-2">
-            <p class="m-0">NEW UPDATES</p>
-            <img src="" alt="">
-          </div>
-          <div class="col-7 d-flex align-items-center">
-            QUI VA LA SCRITTA
-          </div>
-          <div class="social-icons col-3 d-flex justify-content-end align-items-center">
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <NewUpdatesHeaderTop/>
     <div class="container my-3">
       <div class="row">
         <!--logo header-->
@@ -113,18 +77,6 @@ export default {
 <style lang="scss" scoped>
 @use 'bootstrap/scss/bootstrap.scss' as *;
 
-.updates-text{
-  background-color: #545454;
-  color: white;
-  font-weight: bold;
-  height: 50px;
-}
-
-.news-updates{
-  background-color: #BF1D2E;
-  height: 50px;
-}
-
 a{
   text-decoration: none;
   color: black;
@@ -144,22 +96,13 @@ a{
     height: 90px;
 }
 
-
 li{
   list-style-type: none;
   font-size: 20px;
+  font-weight: bold;
 }
 
 a.nav-link:hover{
   color: #BF1D2E
-}
-
-.social-icons i{
-  background-color: white;
-  border-radius: 50%;
-  padding: 5px 8px;
-  color: #BF1D2E;
-  font-size: 15px;
-  margin-right: 10px;
 }
 </style>
