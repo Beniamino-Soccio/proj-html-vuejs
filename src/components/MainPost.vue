@@ -210,6 +210,10 @@ body {
   padding: 1px 40px;
 }
 
+.read-more:hover {
+  background-color: #333333;
+}
+
 .first-topic,
 .second-topic {
   top: 10px;
