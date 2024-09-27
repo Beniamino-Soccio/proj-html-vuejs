@@ -156,17 +156,10 @@ export default {
   margin-right: 10px;
   position: relative;
 }
-.boxLup{
+
+.boxLup {
   background-image: url(../assets/img/anime-fashion.webp);
   background-size: cover;
-  border-radius: 10px;
-  height: calc(100% / 2 - 5px);
-  width: 300px;
-  margin-bottom: 10px;
-  position: relative;
-
-}
-.boxLup img{
   border-radius: 10px;
   height: calc(100% / 2 - 5px);
   width: 100%;
@@ -223,13 +216,14 @@ export default {
   text-align: center;
   height: 100%;
   width: 100%;  
-  filter: brightness(50%);
   z-index: 1;
 
 }
 
 .boxCentrale:hover, .boxLup:hover, .boxLdown:hover, .boxRup:hover, .boxRdown:hover {
-  filter: brightness(70%); 
+
+
+  z-index: 2;
 }
 
 
@@ -301,6 +295,19 @@ p, h6 {
 }
 
 .data, .buttons {
-  z-index: 3; /* Porta i bottoni e il testo sopra l'effetto */
+  z-index: 3; 
 }
+
+img{
+
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  filter: brightness(50%);
+
+
+}
+ img:hover {
+  filter: brightness(70%); 
+ }
 </style>
