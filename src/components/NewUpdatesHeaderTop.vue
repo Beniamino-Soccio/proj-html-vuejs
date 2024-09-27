@@ -54,11 +54,11 @@ export default {
     <div class="news-updates d-flex align-items-center py-2">
       <div class="container">
         <div class="row">
-          <div class="col-2 updates-text d-flex justify-content-center align-items-center py-2">
+          <div class="col-2 updates-text fw-semibold d-flex justify-content-center align-items-center py-2">
             <p class="m-0">NEW UPDATES</p>
           </div>
           <!--Current New Updates-->
-          <div class="current-new-updates col-7 d-flex align-items-center p-0 gap-3 text-white fw-bold">
+          <div class="current-new-updates col-7 d-flex align-items-center p-0 gap-3 text-white fw-semibold">
             <img :src="newUpdates[currentIndex].img" :alt="newUpdates[currentIndex].text">
             <div><span>{{ newUpdates[currentIndex].hours }}</span></div>
             <div><span class="color-text">{{ newUpdates[currentIndex].text }}</span></div>
@@ -95,7 +95,6 @@ export default {
 .updates-text{
   background-color: #545454;
   color: white;
-  font-weight: bold;
   height: 40px;
 }
 
