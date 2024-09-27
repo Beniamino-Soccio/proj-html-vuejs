@@ -141,9 +141,9 @@ export default {
 
 .gallery {
   height: 500px;
-  border: 1px dashed dodgerblue;
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
 }
 
 .boxCentrale {
