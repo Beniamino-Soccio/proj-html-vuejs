@@ -217,7 +217,7 @@ body {
   text-align: center;
   line-height: 35px;
   position: absolute;
-  top: 480px;
+  top: 420px;
   z-index: 2;
   transition-property: background-color;
   transition-duration: 0.6s;

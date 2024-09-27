@@ -5,6 +5,8 @@ export default {
   },
   data() {
     return {
+     displayedText: '',
+     typingInterval: null,
      currentIndex: 0,
      newUpdates:[
       {
@@ -30,23 +32,49 @@ export default {
     ]
     }
   },
-  methods:{
-      nextUpdate(){
-        this.currentIndex = (this.currentIndex + 1) % this.newUpdates.length;
-      },
-      prevUpdate(){
-        if (this.currentIndex > 0) {
-        this.currentIndex--;
+  
+  methods: {
+  nextUpdate() {
+    this.currentIndex = (this.currentIndex + 1) % this.newUpdates.length;
+    this.startTyping();
+  },
+  prevUpdate() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    } else {
+      this.currentIndex = this.newUpdates.length - 1;
+    }
+    this.startTyping();
+  },
+  startTyping() {
+    // Resetta il testo visualizzato
+    this.displayedText = '';
+    const fullText = this.newUpdates[this.currentIndex].text;
+    let index = 0;
+
+    // Cancella eventuali intervalli di digitazione precedenti
+    if (this.typingInterval) {
+      clearInterval(this.typingInterval);
+    }
+
+    // Inizia un nuovo intervallo di digitazione
+    this.typingInterval = setInterval(() => {
+      if (index < fullText.length) {
+        this.displayedText += fullText.charAt(index);
+        index++;
       } else {
-        this.currentIndex = this.newUpdates.length - 1;
+        clearInterval(this.typingInterval);
       }
-      }
-    },
-    mounted() {
-      this.updateInterval = setInterval(() => {
-      this.nextUpdate();
+    }, 50); // Velocità di digitazione (in millisecondi)
+  }
+},
+mounted() {
+  this.startTyping();
+  this.updateInterval = setInterval(() => {
+    this.nextUpdate();
   }, 5000);
 },
+
 }
 </script>
 
@@ -61,7 +89,7 @@ export default {
           <div class="current-new-updates col-7 d-flex align-items-center p-0 gap-3 text-white fw-semibold">
             <img :src="newUpdates[currentIndex].img" :alt="newUpdates[currentIndex].text">
             <div><span>{{ newUpdates[currentIndex].hours }}</span></div>
-            <div><span class="color-text">{{ newUpdates[currentIndex].text }}</span></div>
+            <div><span class="color-text">{{ displayedText }}</span></div>
           </div>
           <!--Social Icon-->
           <div class="social-icons col-3 d-flex justify-content-end align-items-center">
