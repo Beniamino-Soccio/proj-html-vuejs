@@ -32,7 +32,6 @@ export default {
   <img src="../assets/img/page-banner-1.webp" alt="">
 </div>
 <MainPost />
-<MainSlider />
 <MainTrailer />
 <MainThumbs />
 
