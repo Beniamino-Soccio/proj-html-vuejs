@@ -61,7 +61,7 @@ export default {
           <div class="current-new-updates col-7 d-flex align-items-center p-0 gap-3 text-white fw-bold">
             <img :src="newUpdates[currentIndex].img" :alt="newUpdates[currentIndex].text">
             <div><span>{{ newUpdates[currentIndex].hours }}</span></div>
-            <div><span>{{ newUpdates[currentIndex].text }}</span></div>
+            <div><span class="color-text">{{ newUpdates[currentIndex].text }}</span></div>
           </div>
           <!--Social Icon-->
           <div class="social-icons col-3 d-flex justify-content-end align-items-center">
@@ -111,5 +111,15 @@ export default {
   color: #BF1D2E;
   font-size: 15px;
   margin-right: 10px;
+}
+
+.social-icons i:hover{
+  background-color: #333;
+  color: white;
+}
+
+.color-text:hover{
+  color: #333;
+  cursor: pointer;
 }
 </style>
