@@ -92,9 +92,16 @@ export default {
 
 <template>
   <div class="container">
-    <h3 class="my-4">FEATURED POST</h3>
+    <div class="top-post d-flex justify-content-between">
+      <h3 class="my-4 fw-bold">FEATURED POST</h3>
+      <div class="arrows d-flex position-relative text-center">
+        <div class="custom-prev"><i class="bi bi-caret-left-fill position-absolute rounded-circle prev"></i></div>
+        <div class="custom-next"><i class="bi bi-caret-right-fill position-absolute rounded-circle next"></i></div>
+      </div>
+    </div>
+
     <swiper ref="{swiperRef}" :slidesPerView="3" :loop="true" :centeredSlides="false" :spaceBetween="30"
-      :navigation="true" :modules="modules" class="mySwiper">
+      :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :modules="modules" class="mySwiper">
       <swiper-slide class="card position-relative" v-for="(card, index) in cardList" :key="index">
         <img :src="card.image" class="card-img-top" alt="post's image">
         <button class="first-topic position-absolute border-0"> {{ card.firstTopic }} </button>
@@ -206,9 +213,9 @@ body {
 .first-topic,
 .second-topic {
   top: 10px;
-  font-size: 15px;
-  padding: 0 20px;
-  border-radius: 15px;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 5px;
 }
 
 .first-topic {
@@ -217,5 +224,29 @@ body {
 
 .second-topic {
   left: 55%;
+}
+
+.arrows i {
+  background-color: #333333;
+  width: 35px;
+  height: 35px;
+  top: 20px;
+  color: white;
+  line-height: 35px;
+  cursor: pointer;
+  transition-property: background-color;
+  transition-duration: 0.6s;
+}
+
+i:hover {
+  background-color: #BF1D2E;
+}
+
+.prev {
+  right: 50px;
+}
+
+.next {
+  right: 0;
 }
 </style>
