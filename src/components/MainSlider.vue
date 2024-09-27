@@ -11,7 +11,7 @@ import 'swiper/css/navigation';
 
 
 // import required modules
-import { Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default {
   components: {
@@ -20,7 +20,7 @@ export default {
   },
   setup() {
     return {
-      modules: [Pagination, Navigation],
+      modules: [Autoplay, Pagination, Navigation],
       cardList: [
         {
           title: 'Live Ideas You Might Be Anime',
@@ -112,8 +112,7 @@ export default {
   <div class="custom-prev"><i class="bi bi-caret-left-fill"></i></div>
   <div class="custom-next"><i class="bi bi-caret-right-fill"></i></div>
   <div class="main-slider">
-    <swiper ref="{swiperRef}" :slidesPerView="4" :loop="true" :centeredSlides="false" :spaceBetween="10"
-    :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :modules="modules" class="mySwiper">
+    <swiper ref="{swiperRef}" :slidesPerView="4" :loop="true" :centeredSlides="false" :spaceBetween="10" :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :modules="modules" class="mySwiper" :autoplay="{ delay: 5000 }">
       <swiper-slide class="card position-relative" v-for="(card, index) in cardList" :key="index">
         <img :src="card.image" class="card-img-top" alt="">
         <div class="d-flex badges-group position-absolute gap-2">
@@ -121,7 +120,7 @@ export default {
           <button v-if="card.secondTopic" class="second-topic border-0" >{{ card.secondTopic }}</button>
           <button v-if="card.thirdTopic"class="third-topic border-0">{{ card.thirdTopic }}</button>
         </div>
-        <div class="card-body">
+        <div class="card-body p-2">
           <p class="mb-0 fw-bold title"> {{ card.title }} </p>
           <p class="mb-1 date"> {{ card.date }} </p>
         </div>
@@ -248,6 +247,6 @@ body {
   border-radius: 5px;
 }
 img{
-  max-height: 260px;
+  height: 300px;
 }
 </style>
