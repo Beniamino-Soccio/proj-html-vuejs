@@ -125,7 +125,7 @@ p {
   .bar {
     width: 100%;
     height: 5px;
-    background-color: rgba(0, 0, 0, 0.466);
+    background-color: #333;
     position: absolute;
     left: 0;
     top: -80px;
@@ -136,7 +136,7 @@ p {
     height: 0;
     border-left: 13px solid transparent;
     border-right: 13px solid transparent;
-    border-top: 13px solid rgba(0, 0, 0, 0.466);
+    border-top: 13px solid #333;
     position: absolute;
     top: -75px;
     left: 50%;
