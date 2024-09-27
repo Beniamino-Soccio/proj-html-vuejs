@@ -47,17 +47,14 @@ export default {
     this.startTyping();
   },
   startTyping() {
-    // Resetta il testo visualizzato
     this.displayedText = '';
     const fullText = this.newUpdates[this.currentIndex].text;
     let index = 0;
 
-    // Cancella eventuali intervalli di digitazione precedenti
     if (this.typingInterval) {
       clearInterval(this.typingInterval);
     }
 
-    // Inizia un nuovo intervallo di digitazione
     this.typingInterval = setInterval(() => {
       if (index < fullText.length) {
         this.displayedText += fullText.charAt(index);
@@ -65,7 +62,7 @@ export default {
       } else {
         clearInterval(this.typingInterval);
       }
-    }, 50); // Velocità di digitazione (in millisecondi)
+    }, 50);
   }
 },
 mounted() {
