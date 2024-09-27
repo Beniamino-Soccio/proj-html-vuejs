@@ -3,17 +3,17 @@ import MainGallery from "./MainGallery.vue";
 import MainNews from ".//MainNews.vue";
 import MainPost from "./MainPost.vue";
 import MainSlider from "./MainSlider.vue";
-import MainThumbs from "./MainThumbs.vue";
 import MainTrailer from "./MainTrailer.vue";
+import MainThumbs from "./MainThumbs.vue";
 
 export default {
   components: {
     MainGallery,
     MainNews,
     MainPost,
-    MainSlider,
-    MainThumbs,
+    MainSlider,    
     MainTrailer,
+    MainThumbs,
   },
   data() {
     return {
@@ -25,6 +25,7 @@ export default {
 
 <template>
 
+<MainSlider />
 <MainGallery />
 <MainNews />
 <div class="banner d-flex justify-content-center align-items-center">
@@ -43,7 +44,7 @@ export default {
   background-color: #f3f3f3;
 }
 .banner img{
-  width: 1200px;
+  width: 1300px;
   height: 110px;
   border-radius: 5px;
 }

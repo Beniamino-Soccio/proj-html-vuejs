@@ -9,21 +9,48 @@ export default {
         name:  'HOME',
         url: ''
        },
-       { name: 'ABOUT US',
+       { 
+        name: 'ABOUT US',
         url: ''
        },
-       { name: 'LIFESTYLE',
+       { 
+        name: 'LIFESTYLE',
         url: ''
        },
-       { name: 'STORIES',
+       { 
+        name: 'STORIES',
         url: ''
        },
-       { name: 'PAGES',
+       {
+        name: 'PAGES',
         url: ''
        },
-       { name: 'CONTACT US',
+       { 
+        name: 'CONTACT US',
         url: ''
        },
+    ],
+    newUpdates:[
+      {
+        img:'/src/assets/img/healthy-foods-150x150.webp',
+        hours: '05.32',
+        text: 'THE BEST HEALTHY FOODS'
+      },
+      {
+        img:'/src/assets/img/rice-ball-150x150.webp',
+        hours: '05.37',
+        text: 'HYGENIC RECEIPE TO PREPARE RICE'
+      },
+      {
+        img:'/src/assets/img/winter-150x150.webp',
+        hours: '05.29',
+        text: 'THE BEST WINTER OUTFITS'
+      },
+      {
+        img:'/src/assets/img/meal-time-150x150.webp',
+        hours: '05.35',
+        text: 'THE BEST TIME TO HAVE A MEAL'
+      },
     ]
   }
     }
@@ -32,6 +59,25 @@ export default {
 
 <template>
   <header>
+    <div class="news-updates d-flex align-items-center py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-2 updates-text d-flex justify-content-center align-items-center py-2">
+            <p class="m-0">NEW UPDATES</p>
+            <img src="" alt="">
+          </div>
+          <div class="col-7 d-flex align-items-center">
+            QUI VA LA SCRITTA
+          </div>
+          <div class="social-icons col-3 d-flex justify-content-end align-items-center">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="container my-3">
       <div class="row">
         <!--logo header-->
@@ -67,6 +113,18 @@ export default {
 <style lang="scss" scoped>
 @use 'bootstrap/scss/bootstrap.scss' as *;
 
+.updates-text{
+  background-color: #545454;
+  color: white;
+  font-weight: bold;
+  height: 50px;
+}
+
+.news-updates{
+  background-color: #BF1D2E;
+  height: 50px;
+}
+
 a{
   text-decoration: none;
   color: black;
@@ -94,5 +152,14 @@ li{
 
 a.nav-link:hover{
   color: #BF1D2E
+}
+
+.social-icons i{
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  color: #BF1D2E;
+  font-size: 15px;
+  margin-right: 10px;
 }
 </style>
