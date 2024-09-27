@@ -2,6 +2,7 @@
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import NewUpdatesHeaderTop from './NewUpdatesHeaderTop.vue';
+import AnimatedBurgerMenuHeader from './AnimatedBurgerMenuHeader.vue';
 export default {
   data() {
     return {
@@ -34,7 +35,8 @@ export default {
   }
 },
 components: {
-  NewUpdatesHeaderTop
+  NewUpdatesHeaderTop,
+  AnimatedBurgerMenuHeader
 }
   }
 </script>
@@ -59,7 +61,7 @@ components: {
     <div class="container py-3">
       <div class="row">
         <div class="col-2 d-flex align-items-center">
-          <a href="#"><i class="bi bi-list fs-2"></i></a>
+          <a href="#"><AnimatedBurgerMenuHeader/></a>
         </div>
         <div class="col-8 d-flex align-items-center justify-content-center">
           <ul class="m-0" v-for="(nav, index) in navLink">
