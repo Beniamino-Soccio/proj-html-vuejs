@@ -261,4 +261,9 @@ i:hover {
 .next {
   right: 0;
 }
+
+.card-body,
+.card {
+  background-color: #F3F3F3;
+}
 </style>

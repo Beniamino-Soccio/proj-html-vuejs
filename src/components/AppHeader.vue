@@ -71,7 +71,7 @@ components: {
         </div>
         <div class="col-8 d-flex align-items-center justify-content-center">
           <ul class="m-0" v-for="(nav, index) in navLink" :key="index">
-            <li>
+            <li class="fw-semibold">
              <a :href="nav.url">
                <span><i :class="[nav.icon]"></i> {{nav.name }}</span>
              </a>
@@ -117,7 +117,6 @@ li{
 
 li{
   list-style-type: none;
-  font-weight: bold;
 }
 
 a.nav-link:hover{
