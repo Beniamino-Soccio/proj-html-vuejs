@@ -89,7 +89,7 @@ export default {
 
 <style scoped>
 iframe{
-  width: 840px;
+  width: 100%;
   height: 550px;
 }
 ul{
@@ -127,6 +127,7 @@ p{
 }
 .playlist-video{
   height: 550px;
+  width: 30%;
 }
 i{
   font-size: 50px;
@@ -139,5 +140,8 @@ li:hover p:first-child{
 }
 .trailers{
   margin: 50px auto;
+}
+.current-video{
+  width: 70%;
 }
 </style>
