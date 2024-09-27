@@ -60,8 +60,8 @@ export default {
           </div>
           <!--Social Icon-->
           <div class="social-icons col-3 d-flex justify-content-end align-items-center">
-            <div @click="prevUpdate"><i class="bi bi-arrow-bar-left"></i></div>
-            <div @click="nextUpdate"><i class="bi bi-arrow-bar-right me-5"></i></div>
+            <div @click="prevUpdate"><i class="bi bi-caret-left-fill"></i></div>
+            <div @click="nextUpdate"><i class="bi bi-caret-right-fill me-5"></i></div>
             <a href="#"><i class="bi bi-facebook"></i></a>
             <a href="#"><i class="bi bi-twitter-x"></i></a>
             <a href="#"><i class="bi bi-instagram"></i></a>
@@ -75,7 +75,7 @@ export default {
 <style lang="scss" scoped>
 @use 'bootstrap/scss/bootstrap.scss' as *;
 
-.bi-arrow-bar-left, .bi-arrow-bar-right{
+.bi-caret-left-fill, .bi-caret-right-fill{
   cursor: pointer;
 }
 
